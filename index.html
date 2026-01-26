@@ -1,181 +1,760 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Karan Bhandari</title>
+    <meta name="description" content="Karan Bhandari - Software Developer Portfolio. University of Waterloo CS Graduate specializing in full-stack development and open source.">
+    <meta name="keywords" content="Karan Bhandari, Software Developer, Full Stack Developer, University of Waterloo, Open Source">
+    <meta name="author" content="Karan Bhandari">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <title>Karan Bhandari | Software Developer</title>
 
-    <!-- Custom Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>K</text></svg>">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="animate.min.css" type="text/css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="creative.css" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="page-top">
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top">Home</a>
-        </div>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#about">About</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#social">Social</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact Me</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">&lt;KB /&gt;</span>
+            </a>
 
-<header>
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h1>Hi, I am Karan Bhandari</h1>
-            <hr>
-            <p>I am an enthusiastic developer, please feel free to reach out if you would like to chat about anything 🙂 </p>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
 
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Scroll me</a>
-        </div>
-    </div>
-</header>
-
-<section class="bg-primary" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">PLEASURE TO SEE YOU HERE :)</h2>
-                <hr class="light">
-                <p class="text-faded">I have graduted from The University of Waterloo, with a Bachelor's in Computer Science. I am an Open Source enthusiast, and have experience of working as a Software developer and multiple organisations. </p>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<section id="social">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Find Me</h2>
-                <hr class="primary">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <a href="https://www.facebook.com/karan7752"> <i class="fa fa-4x fa-facebook  wow bounceIn text-primary" aria-hidden="true"></i></a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Karan Bhandari</h1>
+                <div class="hero-title-wrapper">
+                    <span class="hero-title-prefix">I'm a </span>
+                    <span class="typed-text" id="typed-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    University of Waterloo Computer Science graduate passionate about building
+                    innovative solutions and contributing to open source projects.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/karanbhandari" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://ca.linkedin.com/in/karan-bhandari-676217ba" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://codepen.io/karanbhandari/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="CodePen">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                    <a href="mailto:karan7752@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <a href="https://github.com/karanbhandari"><i class="fa fa-4x fa-github wow bounceIn text-primary" data-wow-delay=".1s"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <a href="https://ca.linkedin.com/in/karan-bhandari-676217ba"> <i class="fa fa-4x fa-linkedin wow bounceIn text-primary" data-wow-delay=".2s"></i></a>
-
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <a href="http://codepen.io/karanbhandari/"><i class="fa fa-4x fa-codepen wow bounceIn text-primary" data-wow-delay=".3s"> </i></a>
-
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">developer.js</span>
+                    </div>
+                    <pre class="code-content"><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">"Karan Bhandari"</span>,
+  <span class="property">title</span>: <span class="string">"Software Developer"</span>,
+  <span class="property">education</span>: <span class="string">"UWaterloo CS"</span>,
+  <span class="property">skills</span>: [<span class="string">"JavaScript"</span>, <span class="string">"Python"</span>,
+           <span class="string">"React"</span>, <span class="string">"Node.js"</span>],
+  <span class="property">passion</span>: <span class="string">"Open Source"</span>,
+  <span class="method">code</span>: () => <span class="string">"Building the future"</span>
+};</code></pre>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </a>
+    </section>
 
-<section id="projects">
-<aside class="bg-dark">
-    <div class="container text-center">
-        <div class="call-to-action">
-            <h2>More Projects will be coming out soon.!</h2>
-            <a href="./resume.pdf" class="btn btn-default btn-xl wow tada">Resume</a>
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get To Know</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <div class="image-border"></div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="20">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="10">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Education</h3>
+                            <p>Bachelor's in Computer Science from University of Waterloo</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-code-branch"></i>
+                            <h3>Open Source</h3>
+                            <p>Active contributor to various open source projects</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Problem Solver</h3>
+                            <p>Passionate about finding elegant solutions to complex problems</p>
+                        </div>
+                    </div>
+                    <p class="about-description">
+                        I'm a software developer with a strong foundation in computer science and a passion
+                        for creating impactful software. After graduating from the University of Waterloo,
+                        I've dedicated myself to continuous learning and building applications that make
+                        a difference.
+                    </p>
+                    <p class="about-description">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to
+                        open source, or sharing knowledge with the developer community. I believe in writing
+                        clean, maintainable code and always strive for excellence in everything I do.
+                    </p>
+                    <a href="./resume.pdf" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-</aside>
-</section>
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">My Contact Information</h2>
-                <hr class="primary">
-                <p> I can be contacted at my email address and I would promptly respond</p>
-                <p>Thanks for visiting though!</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Abilities</span>
+                <h2 class="section-title">Skills & Technologies</h2>
             </div>
-            <div class="col-lg-4 col-lg-offset-2 text-center">
-                <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                <p>+1-226-600-8623</p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p><a href="mailto:karan7752@gmail.com">karan7752@gmail.com</a></p>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Frontend Development
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="95">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span class="skill-name">CSS3/SASS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Backend Development
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="skill-name">SQL/NoSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Tools & Others
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="70">
+                            <div class="skill-icon">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-icon">
+                                <i class="fab fa-linux"></i>
+                            </div>
+                            <span class="skill-name">Linux</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- jQuery -->
-<script src="jquery.js"></script>
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Journey</span>
+                <h2 class="section-title">Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - Present</span>
+                        <h3 class="timeline-title">Software Developer</h3>
+                        <span class="timeline-company">Tech Company</span>
+                        <p class="timeline-description">
+                            Building scalable web applications and contributing to system architecture
+                            decisions. Working with modern tech stack including React, Node.js, and
+                            cloud services.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - 2023</span>
+                        <h3 class="timeline-title">Junior Developer</h3>
+                        <span class="timeline-company">Software Company</span>
+                        <p class="timeline-description">
+                            Developed and maintained multiple client projects. Collaborated with
+                            cross-functional teams to deliver high-quality software solutions.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2019 - 2021</span>
+                        <h3 class="timeline-title">Software Developer Intern</h3>
+                        <span class="timeline-company">University of Waterloo Co-op</span>
+                        <p class="timeline-description">
+                            Completed multiple co-op terms at various companies, gaining hands-on
+                            experience in full-stack development, agile methodologies, and
+                            professional software engineering practices.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Full Stack</span>
+                            <span class="tag">Agile</span>
+                            <span class="tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker education"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2016 - 2021</span>
+                        <h3 class="timeline-title">Bachelor of Computer Science</h3>
+                        <span class="timeline-company">University of Waterloo</span>
+                        <p class="timeline-description">
+                            Completed rigorous computer science program with focus on software
+                            engineering, algorithms, and data structures. Participated in various
+                            hackathons and coding competitions.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">CS Fundamentals</span>
+                            <span class="tag">Algorithms</span>
+                            <span class="tag">Co-op</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="bootstrap.min.js"></script>
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/karanbhandari" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Web Application</h3>
+                        <p class="project-description">
+                            A full-stack web application built with modern technologies,
+                            featuring responsive design and real-time functionality.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/karanbhandari" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            Complete e-commerce solution with payment integration,
+                            inventory management, and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>Stripe</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/karanbhandari" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Mobile App</h3>
+                        <p class="project-description">
+                            Cross-platform mobile application with native performance
+                            and beautiful UI/UX design.
+                        </p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="other">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/karanbhandari" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">CLI Tool</h3>
+                        <p class="project-description">
+                            Command-line tool for automating development workflows
+                            and improving productivity.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Click</span>
+                            <span>Shell</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/karanbhandari" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">
+                            Real-time analytics dashboard with data visualization
+                            and interactive charts.
+                        </p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>D3.js</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="other">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/karanbhandari" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">ML Project</h3>
+                        <p class="project-description">
+                            Machine learning model for predictive analysis
+                            with high accuracy and performance.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-cta">
+                <a href="https://github.com/karanbhandari" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                    <i class="fab fa-github"></i>
+                    <span>View More on GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- Plugin JavaScript -->
-<script src="jquery.easing.min.js"></script>
-<script src="jquery.fittext.js"></script>
-<script src="wow.min.js"></script>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together</h3>
+                    <p>
+                        I'm always open to discussing new projects, creative ideas,
+                        or opportunities to be part of your vision. Feel free to reach out!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:karan7752@gmail.com">karan7752@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+12266008623">+1 (226) 600-8623</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Location</span>
+                                <span>Ontario, Canada</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com/karanbhandari" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ca.linkedin.com/in/karan-bhandari-676217ba" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://codepen.io/karanbhandari/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="CodePen">
+                            <i class="fab fa-codepen"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Custom Theme JavaScript -->
-<script src="creative.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>&lt;KB /&gt;</span>
+                </div>
+                <p class="footer-text">
+                    Designed & Built with <i class="fas fa-heart"></i> by Karan Bhandari
+                </p>
+                <div class="footer-social">
+                    <a href="https://github.com/karanbhandari" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://ca.linkedin.com/in/karan-bhandari-676217ba" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://codepen.io/karanbhandari/" target="_blank" rel="noopener noreferrer" aria-label="CodePen">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
 </body>
 
 </html>
